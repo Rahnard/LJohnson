@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +8,8 @@
 
 body {
   font-size: 1.8rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
 }
 
 .homeDiv {
@@ -51,4 +55,106 @@ body {
   outline: none;
   border-radius: 25px;
   border: none;
+}
+
+/* LandingSide Styles */
+
+.landingSideStyle {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  height: 100vh;
+  float: left;
+  width: 20vw;
+}
+
+.landingSideStyle .landingImg {
+  width: 140px;
+}
+
+.landingSideStyle .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  margin-top: 15px;
+}
+
+.landingSideStyle .links a {
+  width: 195px;
+  height: 37px;
+  text-decoration: none;
+  color: #1a5871;
+  font-size: 0.9375rem;
+  padding-top: 8px;
+  padding-bottom: 27px;
+  text-align: center;
+}
+
+.landingSideStyle .links .link-1 {
+  border: 2px solid #1a5871;
+  border-radius: 30px;
+}
+
+.landingSideStyle .links .link-1 span {
+  /* padding-left: 15px; */
+  padding-right: 20px;
+  font-size: 1rem;
+  font-weight: 700 !important;
+}
+
+.landingSideStyle .links .link-2 {
+  margin-top: 15px;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.landingSideStyle .links .link-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.landingSideStyle .links .link-3 span {
+  padding-right: 20px;
+}
+
+/* LandingNavStyle */
+.landingNavStyle {
+  float: right;
+  width: 80vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landingNavStyle form {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  width: 80%;
+}
+
+.landingNavStyle form input {
+  padding: 10px 20px 10px 20px;
+  width: 75%;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background-color: #e0e0e0;
+  /* background: url(images/comment-author.gif) no-repeat scroll 7px 7px; */
+  padding-left: 30px;
+}
+
+.landingNavStyle form i {
+  font-size: 1.5rem;
+  padding-right: 10px;
+  padding-bottom: 2px;
 }
