@@ -3,14 +3,7 @@ import axios from 'axios';
 import LjohnsonContext from './ljohnsonContext';
 import LjohnsonReducer from './ljohnsonReducer';
 
-import {
-  SET_LOADING,
-  SEARCH_USERS,
-  CLEAR_USERS,
-  GET_USER,
-  GET_USERS,
-  GET_REPOS,
-} from '../types';
+import { SET_LOADING, GET_CUSTOMER, GET_CUSTOMERS } from '../types';
 
 let githubClientId;
 let githubClientSecret;
@@ -25,14 +18,141 @@ if (process.env.NODE_ENV !== 'production') {
 
 const LjohnsonState = props => {
   const initialState = {
-    users: [],
+    customers: [
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+      {
+        name: 'Aliyu Gambia Sanusi',
+        email: 'email@mail.me',
+        phone: 818673673,
+        customerId: Math.random() * 1000,
+        dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
+      },
+    ],
     loading: false,
   };
 
   const [state, dispatch] = useReducer(LjohnsonReducer, initialState);
 
   // Search Users
-  const searchUsers = async text => {
+  const getCustomers = async text => {
     setLoading();
 
     const res = await axios.get(
@@ -40,7 +160,7 @@ const LjohnsonState = props => {
     );
 
     dispatch({
-      type: SEARCH_USERS,
+      type: GET_CUSTOMERS,
       payload: res.data.items,
     });
   };
@@ -54,15 +174,15 @@ const LjohnsonState = props => {
         `https://api.github.com/users?client_id=${githubClientId}&client_secret=${githubClientSecret}`,
       );
       dispatch({
-        type: GET_USERS,
+        type: GET_CUSTOMERS,
         payload: res.data,
       });
     };
     func();
   }, []);
 
-  // Get User
-  const getUser = async username => {
+  // Get Customer
+  const getCustomer = async username => {
     setLoading();
 
     const res = await axios.get(
@@ -70,42 +190,21 @@ const LjohnsonState = props => {
     );
 
     dispatch({
-      type: GET_USER,
+      type: GET_CUSTOMER,
       payload: res.data,
     });
   };
-
-  // Get Repos
-  const getUserRepos = async username => {
-    setLoading(true);
-
-    const res = await axios.get(
-      `https://api.github.com/users/${username}/repos?per_page=15&sort=created:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`,
-    );
-
-    // setRepos(res.data)
-    // setLoading(false)
-    dispatch({
-      type: GET_REPOS,
-      payload: res.data,
-    });
-  };
-
-  // Clear Users
-  const clearUsers = () => dispatch({ type: CLEAR_USERS });
 
   // Set Loading
   const setLoading = () => dispatch({ type: SET_LOADING });
 
   return (
     <LjohnsonContext.Provider
-      value={
-        {
-          // users: state.users,
-          // loading: state.loading,
-          // searchUsers,
-        }
-      }>
+      value={{
+        customers: state.customers,
+        loading: state.loading,
+        getCustomers,
+      }}>
       {props.children}
     </LjohnsonContext.Provider>
   );

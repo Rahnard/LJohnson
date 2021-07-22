@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import Alert from './components/layout/Alert';
@@ -16,8 +17,8 @@ const App = () => {
         <Router>
           <Alert />
           <Switch>
-            <Home />
-            <Landing />
+            <Route exact path='/' component={Home} />
+            <Route exact path='/landing' component={Landing} />
           </Switch>
         </Router>
       </AlertState>
