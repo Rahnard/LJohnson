@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logoImg from '../../img/logo1.svg';
 // import { react-router-dom as r } from 'react-router-dom'
-import './Home';
+import './Login';
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
         <img src={logoImg} alt='L.JOHNSON' style={{ width: '200px' }} />
         <input type='text' placeholder='Username' />
         <input type='password' placeholder='Password' />
-        <Link to={'/landing'}>Login</Link>
+        <Link to='/'>Login</Link>
       </form>
     </div>
   );

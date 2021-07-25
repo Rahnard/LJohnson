@@ -1,13 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const LandingDetail = ({ customer }) => {
+const LandingDetail = ({ client }) => {
   return (
     <div className='headen customer-detail'>
-      <p>{customer.name}</p>
-      <p>{customer.email}</p>
-      <p>{customer.phone}</p>
-      <p>{customer.customerId}</p>
-      <p>{customer.dateTaken}</p>
+      <p>{client.name}</p>
+      <p>{client.email}</p>
+      <p>{client.phone}</p>
+      <p>{client.clientId}</p>
+      <p>{client.dateTaken}</p>
     </div>
   );
 };

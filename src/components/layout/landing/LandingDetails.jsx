@@ -1,4 +1,6 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+
 import LjohnsonContext from '../../../context/ljohnson/ljohnsonContext';
 import LandingDetail from './LandingDetail';
 import Loading from '../loading/Loading';
@@ -6,9 +8,9 @@ import Loading from '../loading/Loading';
 const LandingDetails = () => {
   const ljohnsonContext = useContext(LjohnsonContext);
 
-  const { customers, loading } = ljohnsonContext;
+  const { clients, loading } = ljohnsonContext;
 
-  if (loading) {
+  if (clients == null) {
     return <Loading />;
   } else {
     return (
@@ -26,8 +28,10 @@ const LandingDetails = () => {
           </p>
         </div>
         <div className='customer-details'>
-          {customers.map(customer => (
-            <LandingDetail customer={customer} />
+          {clients.map(client => (
+            <Link to='/client'>
+              <LandingDetail client={client} />
+            </Link>
           ))}
         </div>
       </div>

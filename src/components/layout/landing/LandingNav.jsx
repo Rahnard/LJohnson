@@ -2,7 +2,7 @@ import React from 'react';
 
 const LandingNav = () => {
   return (
-    <div className='landingNavStyle'>
+    <div className='navStyle'>
       <form>
         <div className='input-icon'>
           <i class='fas fa-search'></i>

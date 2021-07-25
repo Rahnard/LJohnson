@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@750&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap');
 
 * {
@@ -10,7 +10,7 @@
 body {
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 /* Home */
@@ -130,16 +130,16 @@ body {
 }
 
 /* LandingNavStyle */
-.landingNavStyle {
+.navStyle {
   float: right;
   width: 80vw;
   height: 20vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.landingNavStyle form {
+.navStyle form {
   display: flex;
   justify-content: flex-start;
   align-content: center;
@@ -147,14 +147,15 @@ body {
   width: 100%;
 }
 
-.landingNavStyle form div {
+.lnavStyle form div {
   width: 100%;
 }
 
-.landingNavStyle form input {
-  padding: 12px 20px 12px 40px;
+.navStyle form input {
+  padding: 12px 20px 12px;
   letter-spacing: 1px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  margin-left: 10px;
   width: 75%;
   border: none;
   border-radius: 5px;
@@ -163,16 +164,17 @@ body {
   padding-left: 30px;
 }
 
-.landingNavStyle form input::placeholder {
-  padding-left: 20px;
+.navStyle form input::placeholder {
+  padding-left: 10px;
   font-family: 'IBM Plex Sans', sans-serif;
   color: #818181;
+  font-size: 20px;
 }
 
 .input-icon i {
   position: absolute;
-  padding: 5px;
-  color: gray;
+  padding: 16.5px;
+  color: #818181;
 }
 
 .input-icon {
@@ -204,6 +206,21 @@ body {
   width: 80vw;
 }
 
+.customer-details a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.customer-detail:hover {
+  cursor: pointer;
+}
+
+.customer-detail:active {
+  background: #e7e6e6;
+  transition: all 0.1s ease-in;
+}
+
 .headen {
   font-weight: 900 !important;
   font-size: 0.75rem;
@@ -231,12 +248,80 @@ body {
   float: right;
 }
 
-custumersDetails {
+/* CLIENT */
+.client-detail {
+  padding-top: 50px;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  border-bottom: 1px #000 solid;
 }
+
+.client-measurement {
+  float: right;
+  width: 80vw;
+  height: 80vh;
+}
+
+.client-detail h1 {
+  padding: 20px 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.client-detail .client-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #b9b9b9;
+}
+
+/* CLIENT MEASUREMENT */
+.measurement-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px;
+}
+
+.measurement-section div {
+  background: red;
+  height: 550px;
+  width: 400px;
+  /* border: #dfd6cd 1px solid; */
+  border: none;
+  border-radius: 20px;
+}
+
+.measurement-section div button {
+  border: none;
+}
+
+.measurement-section button {
+  border: none;
+  width: fit-content;
+  text-align: center;
+}
+
+/* TOP MEASUREMENT */
 
 /* 
  Loading Styles
 */
+
+.loading-div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 .loader {
   color: #333;
