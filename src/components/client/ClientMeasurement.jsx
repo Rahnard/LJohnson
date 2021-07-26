@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import LjohnsonContext from '../../../context/ljohnson/ljohnsonContext';
+import LjohnsonContext from '../../context/ljohnson/ljohnsonContext';
 
 const ClientMeasurement = () => {
   const ljohnsonContext = useContext(LjohnsonContext);

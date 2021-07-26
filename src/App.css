@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@750&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+/* CLIENT */
+.client-detail {
+  padding-top: 50px;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+  border-bottom: 1px #000 solid;
+}
+
+.client-measurement {
+  float: right;
+  width: 80vw;
+  height: 80vh;
+}
+
+.client-detail h1 {
+  padding: 20px 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.client-detail .client-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #b9b9b9;
+}
+
+/* CLIENT MEASUREMENT */
+.measurement-section {
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px;
+  float: right;
+  /* background: red; */
+}
+
+.measurement-section div {
+  background: red;
+  height: 550px;
+  width: 400px;
+  /* border: #dfd6cd 1px solid; */
+  border: none;
+  border-radius: 20px;
+  float: left;
+}
+
+.measurement-section div button {
+  border: none;
+}
+
+.measurement-section button {
+  border: none;
+  width: fit-content;
+  text-align: center;
+}
+
+/* TOP MEASUREMENT */

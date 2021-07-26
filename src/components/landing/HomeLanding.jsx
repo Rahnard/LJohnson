@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import './Landing.css';
 
 import LandingNav from './LandingNav';
 import LandingDetails from './LandingDetails';

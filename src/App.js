@@ -1,17 +1,18 @@
 import React from 'react';
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.scss';
+import './App.css';
 
-import Alert from './components/layout/Alert';
+import Alert from './components/layout/alert/Alert';
+import Home from './components/pages/Home';
 import Login from './components/pages/Login';
-import HomeLanding from './components/layout/landing/HomeLanding';
-import LandingSide from './components/layout/landing/LandingSide';
-import ClientDetail from './components/layout/client/ClientDetail';
-import ClientMeasurement from './components/layout/client/ClientMeasurement';
+
+import ClientMeasurement from './components/client/ClientMeasurement';
+import ClientDetail from './components/client/ClientDetail';
 
 import LjohnsonState from './context/ljohnson/LjohnsonState';
 import AlertState from './context/alert/AlertState';
+import LandingSide from './components/landing/LandingSide';
 
 const App = () => {
   return (
@@ -19,15 +20,19 @@ const App = () => {
       <AlertState>
         <Router>
           <Alert />
-          <Route path='/' component={LandingSide} />
-          <Route exact path='/' component={HomeLanding} />
+          <Route exact path='/' component={Home} />
           <Switch>
             <Route exact path='/login' component={Login} />
-            <Route exact path='/client' component={ClientDetail} />
             <Route
               exact
-              path='/client/measurement'
-              component={ClientMeasurement}
+              path='/client'
+              render={props => (
+                <div>
+                  <LandingSide />
+                  <ClientDetail />
+                  <ClientMeasurement />
+                </div>
+              )}
             />
           </Switch>
         </Router>

@@ -1,5 +1,5 @@
 import React from 'react';
-import imgLogo from '../../../img/logo1.svg';
+import imgLogo from '../../img/logo1.svg';
 import { Link } from 'react-router-dom';
 
 const LandingSide = () => {

@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 
-import LjohnsonContext from '../../../context/ljohnson/ljohnsonContext';
+import LjohnsonContext from '../../context/ljohnson/ljohnsonContext';
+import Home from '../pages/Home';
+// import LjohnsonContext from '../../context/ljohnson/LjohnsonState';
 
 const Client = ({ match }) => {
   const ljohnsonContext = useContext(LjohnsonContext);

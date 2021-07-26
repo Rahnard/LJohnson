@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-import LjohnsonContext from '../../../context/ljohnson/ljohnsonContext';
+import LjohnsonContext from '../../context/ljohnson/ljohnsonContext';
 import LandingDetail from './LandingDetail';
-import Loading from '../loading/Loading';
+import Loading from '../layout/loading/Loading';
 
 const LandingDetails = () => {
   const ljohnsonContext = useContext(LjohnsonContext);
