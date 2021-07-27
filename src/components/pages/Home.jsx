@@ -1,15 +1,14 @@
 import React, { Fragment } from 'react';
-import HomeLanding from '../landing/HomeLanding';
+// import HomeLanding from '../landing/HomeLanding';
 
 import LandingSide from '../landing/LandingSide';
-// import HomeLanding from '../landing/HomeLanding';
-import ClientDetail from '../client/ClientDetail';
+import Landing from '../landing/Landing';
 
 const Home = () => {
   return (
     <Fragment>
       <LandingSide />
-      <HomeLanding />
+      <Landing />
     </Fragment>
   );
 };

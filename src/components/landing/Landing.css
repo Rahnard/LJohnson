@@ -51,7 +51,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 75px;
   height: 100vh;
   float: left;
   width: 20vw;
@@ -87,7 +87,6 @@
 }
 
 .landingSideStyle .links .link-1 span {
-  /* padding-left: 15px; */
   padding-right: 20px;
   font-size: 1rem;
   font-weight: 900 !important;
@@ -116,7 +115,7 @@
 .navStyle {
   float: right;
   width: 80vw;
-  height: 20vh;
+  height: 25vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -130,8 +129,9 @@
   width: 100%;
 }
 
-.lnavStyle form div {
+.navStyle form div {
   width: 100%;
+  /* background: red; */
 }
 
 .navStyle form input {

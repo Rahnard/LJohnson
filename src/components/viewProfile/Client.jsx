@@ -1,15 +1,14 @@
 import React, { Fragment } from 'react';
-
 import ClientDetail from './ClientDetail';
-import ClientMeasurement from './ClientMeasurement';
 
-const AddClient = () => {
+import './Client.css';
+
+const Client = () => {
   return (
     <Fragment>
       <ClientDetail />
-      <ClientMeasurement />
     </Fragment>
   );
 };
 
-export default AddClient;
+export default Client;

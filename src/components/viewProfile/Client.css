@@ -1,0 +1,137 @@
+/* CLIENT */
+.client-detail {
+  padding-top: 50px;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  border-bottom: 1px #000 solid;
+}
+
+.client-measurement {
+  float: right;
+  width: 80vw;
+  height: 80vh;
+}
+
+.client-detail h1 {
+  padding: 20px 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.client-detail .client-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #b9b9b9;
+}
+
+/* CLIENT MEASUREMENT */
+
+.measurement-section {
+  width: 80vw;
+  height: 80vh;
+  float: right;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.measurement {
+  border: 1px solid rgba(223, 214, 205, 0.33);
+  width: 405px;
+  height: 585px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+.measurement .top,
+.trouser {
+  width: 100%;
+  padding: 20px;
+}
+
+.measurement .top .st-item {
+  padding-top: 20px;
+}
+
+.measurement .top h1,
+.measurement .trouser h1 {
+  border-bottom: 2px solid #333;
+  font-size: 1.125rem;
+  padding-bottom: 5px;
+  font-weight: 500;
+}
+
+.measurement .top form section {
+  display: flex;
+  padding-top: 6px;
+  justify-content: center;
+  align-items: center;
+}
+.measurement .top form div {
+  margin: 5px;
+  width: 100%;
+  height: 50px;
+}
+
+.measurement .top form div label {
+  padding-bottom: 10px;
+}
+
+.measurement input {
+  width: 70px;
+  border: 1px solid rgba(223, 214, 205, 0.33);
+  border-radius: 5px;
+  padding-top: 15px;
+  margin-top: 5px;
+  background: transparent;
+  outline: none;
+}
+
+.measurement input::placeholder {
+  font-size: 30px;
+}
+
+.agbada {
+  width: 100%;
+  display: flex;
+}
+
+.agbada div h2 {
+  font-size: 1.12rem;
+  height: 100%;
+  padding-top: 25px;
+  font-weight: 500;
+}
+
+/* Trouser */
+.measurement .trouser form section {
+  display: flex;
+  padding-top: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.measurement .trouser form div {
+  width: 100%;
+  height: 50px;
+  margin: 5px;
+}
+
+.measurement .trouser form section {
+  display: flex;
+  padding-top: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.trouser-side {
+  background: red;
+  width: 100px;
+  display: flex;
+  /* flex-direction: column; */
+}

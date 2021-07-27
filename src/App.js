@@ -1,15 +1,13 @@
 import React from 'react';
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
-import Alert from './components/layout/alert/Alert';
+import Alert from './components/layout/Alert';
 import Home from './components/pages/Home';
 import Login from './components/pages/Login';
+import Client from './components/client/Client';
 
-import ClientMeasurement from './components/client/ClientMeasurement';
-import ClientDetail from './components/client/ClientDetail';
-
+// context imports
 import LjohnsonState from './context/ljohnson/LjohnsonState';
 import AlertState from './context/alert/AlertState';
 import LandingSide from './components/landing/LandingSide';
@@ -29,8 +27,7 @@ const App = () => {
               render={props => (
                 <div>
                   <LandingSide />
-                  <ClientDetail />
-                  <ClientMeasurement />
+                  <Client />
                 </div>
               )}
             />
