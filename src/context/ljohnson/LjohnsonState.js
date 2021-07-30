@@ -8,6 +8,8 @@ import {
   GET_CLIENTS,
   GET_CLIENT,
   TOGGLE_MEASUREMENT,
+  SET_MODAL,
+  SUBMIT_CLIENT,
 } from '../types';
 
 let githubClientId;
@@ -49,35 +51,9 @@ const LjohnsonState = props => {
         address: 'AG 460 Karu, Abuja',
       },
     ],
-    client: {
-      name: 'Aliyu Gambia Sanusi',
-      email: 'email@mail.me',
-      phone: 818673673,
-      clientId: Math.random() * 1000,
-      dateTaken: `${new Date().getDate()} - ${new Date().getMonth()} - ${new Date().getFullYear()}`,
-      address: 'Aso Rock Wuse',
-      measurement: {
-        neck: 21,
-        shoulder: 40,
-        armHold: 52,
-        armLength: 20,
-        roundArm: 29,
-        wrist: 33,
-        chest: 21,
-        halfChest: 40,
-        halfBack: 52,
-        abdomen: 20,
-        hip: 29,
-        bodyLength: 33,
-        agbada: {
-          armLength: 23,
-          bodyLength: 50,
-        },
-      },
-    },
-
-    topTrouser: false,
+    client: null,
     loading: false,
+    modal: false,
   };
 
   const [state, dispatch] = useReducer(LjohnsonReducer, initialState);
@@ -110,6 +86,17 @@ const LjohnsonState = props => {
     });
   };
 
+  // subMit Client
+  const submitClient = client => {
+    setLoading();
+
+    dispatch({
+      type: SUBMIT_CLIENT,
+      payload: client,
+    });
+    console.log(client);
+  };
+
   // Load Users
   useEffect(() => {
     setLoading();
@@ -132,15 +119,21 @@ const LjohnsonState = props => {
   // TOGGLE TOP TROUSER
   const toggleTopTrouser = () => dispatch({ type: TOGGLE_MEASUREMENT });
 
+  // SET MODAL
+  const setModal = () => dispatch({ type: SET_MODAL });
+
   return (
     <LjohnsonContext.Provider
       value={{
         clients: state.clients,
         client: state.client,
         loading: state.loading,
+        modal: state.modal,
         topTrouser: state.topTrouser,
         getClients,
         toggleTopTrouser,
+        setModal,
+        submitClient,
       }}>
       {props.children}
     </LjohnsonContext.Provider>

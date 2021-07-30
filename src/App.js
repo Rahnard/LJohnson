@@ -5,7 +5,8 @@ import './App.css';
 import Alert from './components/layout/Alert';
 import Home from './components/pages/Home';
 import Login from './components/pages/Login';
-import Client from './components/client/Client';
+import Client from './components/viewClient/Client';
+import AddClient from './components/client/AddClient';
 
 // context imports
 import LjohnsonState from './context/ljohnson/LjohnsonState';
@@ -18,7 +19,9 @@ const App = () => {
       <AlertState>
         <Router>
           <Alert />
+          <AddClient />
           <Route exact path='/' component={Home} />
+          {/* <Route exact path='/' component={AddClient} /> */}
           <Switch>
             <Route exact path='/login' component={Login} />
             <Route

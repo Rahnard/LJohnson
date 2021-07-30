@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ORDER LIST */
+.order-list,
+.misc {
+  padding-top: 20px;
+  width: 90%;
+  /* padding-left: 30px; */
+}
+
+.order-list h1,
+.misc h1 {
+  border-bottom: 2px solid #000;
+  font-weight: 300;
+  padding-bottom: 10px;
+  font-size: 29px;
+}
+
+.order-list .fabric-detail form {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.order-list .fabric-detail form input {
+  outline: none;
+  width: 100%;
+  border: none;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #424242;
+  transition: all 2.5 ease;
+}
+
+.order-list .fabric-detail form .fabric-no {
+  width: 100%;
+}
+
+.order-list .fabric-detail form .icon-div {
+  width: 100%;
+}
+
+.order-list .fabric-detail form .icon-div .fabric-icon,
+.misc div .icon-div .fabric-icon,
+.misc div .submit-btn button {
+  padding: 10px;
+  background: none;
+  width: fit-content;
+  float: right;
+  border: none;
+}
+.order-list .fabric-detail form .fabric-icon i,
+.misc div .icon-div .fabric-icon i {
+  color: #257cff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.order-list .fabric-detail form .fabric-icon i:active,
+.misc div .icon-div .fabric-icon i:active {
+  color: #021d46;
+}
+
+.order-list .fabric-detail form .fabric-no input {
+  width: 59px;
+  padding-left: 10px;
+}
+
+.order-list .fabric-detail form .fabric-type {
+  width: 100%;
+}
+
+.order-list .fabric-detail form .fabric-type ul {
+  width: 100%;
+}
+
+.order-list .fabric-detail form .fabric-type ul li {
+  width: 100%;
+  display: flex;
+}
+
+.order-list .fabric-detail form .fabric-type ul li input {
+  width: 100%;
+}
+
+/* MISC */
+.misc {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: -45px;
+}
+
+.misc div {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.misc div input {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #424242;
+  outline: none;
+}
+
+.misc .submit-btn {
+  width: 100%;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.misc .submit-btn i {
+  margin-right: 10px;
+  color: #2ab930;
+}
+
+.misc .submit-btn button {
+  cursor: pointer;
+  background: #e0e0e0 !important;
+  color: #155d18;
+  font-size: 20px;
+  margin-top: 90px;
+  border-radius: 5px;
+}
