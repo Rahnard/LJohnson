@@ -1,48 +1,39 @@
-import React, { Fragment, useState, useEffect, useContext } from 'react';
+import React, { Fragment, useState, useContext } from 'react';
 import user from '../../img/user.svg';
 import cake from '../../img/cake.svg';
 import envelope from '../../img/envelope.svg';
 import phone1 from '../../img/phone.svg';
 import mapPin from '../../img/map-pin.svg';
-import OrderLog from '../pages/OrderLog';
 
 import LjohnsonContext from '../../context/ljohnson/ljohnsonContext';
 
 import './style.css';
 import Misc from '../pages/Misc';
 
+import OrderLog from '../pages/OrderLog';
+
 const AddClient = () => {
   const ljohnsonContext = useContext(LjohnsonContext);
 
-  const { setModal, modal, submitClient } = ljohnsonContext;
-
-  const [trouserLength, setTrouserLength] = useState({
-    half: '',
-    full: '',
-  });
-
-  const clientData = {
-    name: '',
-    email: '',
-    address: '',
-    date: '',
-    phone: '',
-    neck: '',
-  };
+  const {
+    setModal,
+    modal,
+    submitOrderLog,
+    submitClient,
+    submitMeasurement,
+    submitMisc,
+  } = ljohnsonContext;
 
   // STATE INITIALIZATION
-  // const [measurement, setMeasurement] = useState({ top, trouser });
-
-  const [trouser, setTrouser] = useState({
-    trouser_waist: '',
-    trouser_hip: '',
-    trouser_thigh: '',
-    throuser_calf: '',
-    trouser_knee: '',
-    trouser_ankle: '',
+  const [client, setClient] = useState({
+    name: '',
+    date: '',
+    phone: '',
+    address: '',
+    email: '',
   });
 
-  const [top, setTop] = useState({
+  const [topMeasurement, setTopMeasurement] = useState({
     neck: '',
     shoulder: '',
     arm_hole: '',
@@ -54,35 +45,36 @@ const AddClient = () => {
     half_back: '',
     abdomen: '',
     hip: '',
-    waist: '',
-    body_length: {
-      half: '',
-      full: '',
-    },
-  });
-
-  const { half, full } = trouserLength;
-
-  const [agbada, setAgbada] = useState({
     agbada_arm_length: '',
     agbada_body_length: '',
   });
 
-  const { agbada_arm_length, agbada_body_length } = agbada;
-  let measurement;
-  const [client, setClient] = useState([clientData, top, trouser]);
+  const [trouserMeasurement, setTrouserMeasurement] = useState({
+    trouser_waist: '',
+    trouser_hip: '',
+    trouser_thigh: '',
+    trouser_calf: '',
+    half: '',
+    full: '',
+    trouser_knee: '',
+    trouser_ankle: '',
+  });
+
+  // ORDERLOG
+  const [orderLogItem, setOrderLogItem] = useState({
+    total_number_of_fabric: '',
+    type_of_fabric: '',
+    number_of_fabric: '',
+    description: '',
+  });
+
+  // MISC
+  const [misc, setMisc] = useState({
+    misc_description: '',
+  });
 
   // DESTRUCTIONS
-  const {
-    trouser_waist,
-    trouser_hip,
-    trouser_thigh,
-    trouser_calf,
-    trouser_knee,
-    trouser_ankle,
-  } = trouser;
-
-  const { name, email, address, date, phone } = client;
+  const { name, address, date, phone, email } = client;
 
   const {
     neck,
@@ -92,19 +84,49 @@ const AddClient = () => {
     round_arm,
     wrist,
     chest,
-    half_back,
     half_chest,
+    half_back,
     abdomen,
     hip,
-  } = top;
+    agbada_arm_length,
+    agbada_body_length,
+  } = topMeasurement;
 
-  const onChange = e => {};
+  const {
+    trouser_waist,
+    trouser_hip,
+    trouser_thigh,
+    trouser_calf,
+    full,
+    half,
+    trouser_knee,
+    trouser_ankle,
+  } = trouserMeasurement;
+
+  // ON CHANGE
+  const onChange = e => {
+    setClient({ ...client, [e.target.name]: e.target.value });
+    setTopMeasurement({ ...topMeasurement, [e.target.name]: e.target.value });
+    setTrouserMeasurement({
+      ...trouserMeasurement,
+      [e.target.name]: e.target.value,
+    });
+    console.log(e.target.value);
+  };
 
   const onSubmit = e => {
     e.preventDefault();
-    console.log('object');
-    // submitClient(clientData);
-    // e.target.value = '';
+    submitClient(client);
+    submitMeasurement(topMeasurement, trouserMeasurement);
+    submitOrderLog(orderLogItem);
+    submitMisc(misc);
+
+    console.log(
+      client,
+      { topMeasurement, trouserMeasurement },
+      orderLogItem,
+      misc,
+    );
   };
 
   // DATE YEAR INITIALIZATION
@@ -425,10 +447,13 @@ const AddClient = () => {
               </div>
               <div>
                 <div className='fabric'>
-                  <OrderLog />
+                  <OrderLog
+                    orderLogItem={orderLogItem}
+                    setOrderLogItem={setOrderLogItem}
+                  />
                 </div>
                 <div className='misc'>
-                  <Misc />
+                  <Misc misc={misc} setMisc={setMisc} />
                 </div>
               </div>
             </section>

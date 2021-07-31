@@ -8,7 +8,7 @@ import Loading from '../layout/loading/Loading';
 const LandingDetails = () => {
   const ljohnsonContext = useContext(LjohnsonContext);
 
-  const { clients, loading } = ljohnsonContext;
+  const { clients } = ljohnsonContext;
 
   if (clients == null) {
     return <Loading />;

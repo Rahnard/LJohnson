@@ -1,27 +1,18 @@
 import {
-  SET_LOADING,
-  GET_CUSTOMERS,
-  GET_CUSTOMER,
   GET_CLIENT,
-  GET_CLIENTS,
-  TOGGLE_MEASUREMENT,
   SET_MODAL,
   SUBMIT_CLIENT,
+  SUBMIT_ORDER_LOG,
 } from '../types';
 
 // eslint-disable-next-line
 export default (state, action) => {
   switch (action.type) {
-    case GET_CLIENTS:
+    case GET_CLIENT:
       return {
         ...state,
-        users: action.payload,
+        clients: action.payload,
         loading: false,
-      };
-    case TOGGLE_MEASUREMENT:
-      return {
-        ...state,
-        topTrouser: !state.topTrouser,
       };
     case SET_MODAL:
       return {
@@ -32,6 +23,11 @@ export default (state, action) => {
       return {
         ...state,
         client: action.payload,
+      };
+    case SUBMIT_ORDER_LOG:
+      return {
+        ...state,
+        orderLogItem: action.payload,
       };
     default:
       return state;

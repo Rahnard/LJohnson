@@ -5,7 +5,8 @@ import LjohnsonContext from '../../context/ljohnson/ljohnsonContext';
 const Client = ({ match }) => {
   const ljohnsonContext = useContext(LjohnsonContext);
 
-  const { client, loading } = ljohnsonContext;
+  const { client } = ljohnsonContext;
+  // const { client, loading } = ljohnsonContext;
 
   return (
     <div className='clients'>

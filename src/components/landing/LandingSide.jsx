@@ -7,7 +7,7 @@ import LjohnsonContext from '../../context/ljohnson/ljohnsonContext';
 const LandingSide = () => {
   const ljohnsonContext = useContext(LjohnsonContext);
 
-  const { modal, setModal } = ljohnsonContext;
+  const { setModal } = ljohnsonContext;
 
   return (
     <div className='landingSideStyle'>

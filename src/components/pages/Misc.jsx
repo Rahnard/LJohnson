@@ -1,14 +1,22 @@
 import React from 'react';
 import './Style.css';
 
-const Misc = () => {
+const Misc = ({ misc, setMisc }) => {
+  const { misc_description } = misc;
+
+  const onChange = e => {
+    setMisc({ ...misc, [e.target.name]: e.target.value });
+    console.log(e.target.value);
+  };
+
   return (
-    <div className='misc'>
+    <div className='misc' onChange={onChange}>
       <h1>Misc</h1>
       <div>
         <input
           type='text'
-          name='description'
+          name='misc_description'
+          value={misc_description}
           placeholder='Description ( Design Description )'
         />
         <div className='icon-div'>
